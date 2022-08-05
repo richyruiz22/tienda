@@ -26,12 +26,22 @@ function registro(articulo) {
 	 var labelprecio = document.createElement('p');
 	 var labelimagen = document.createElement('img');
 
-	 labeltip.classList.add('entradas');
-	 labeldescripcion.classList.add('entradas');
-	 labelcodigo.classList.add('entradas');
-	 labelprecio.classList.add('entradas');
-	 labelimagen.classList.add('entradas');
+	 labeltip.innerHTML = tip;
+	 labeldescripcion.innerHTML = descripcion;
+	 labelcodigo.innerHTML = codigo;
+     labelprecio.innerHTML = precio;
+     labelimagen.src = imagen ;
+
+	 labeltip.classList.add('presentacion');
+	 labeldescripcion.classList.add('presentacion');
+	 labelcodigo.classList.add('presentacion');
+	 labelprecio.classList.add('presentacion');
+	 labelimagen.classList.add('presentacion');
 
 	 contenedor.appendChild(labeltip);
+	 contenedor.appendChild(labeldescripcion);
+	 contenedor.appendChild(labelcodigo);
+	 contenedor.appendChild(labelprecio);
+	 contenedor.appendChild(labelimagen);
 }
 
