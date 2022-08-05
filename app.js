@@ -19,7 +19,7 @@ function registro(articulo) {
 		document.getElementById('archivo').value = "";
 
 	var contenedor = document.getElementById('articulo');
-
+	 var caja = document.createElement("div");
 	 var labeltip = document.createElement("p");
 	 var labeldescripcion = document.createElement('p');
 	 var labelcodigo = document.createElement('p');
@@ -30,18 +30,22 @@ function registro(articulo) {
 	 labeldescripcion.innerHTML = descripcion;
 	 labelcodigo.innerHTML = codigo;
      labelprecio.innerHTML = precio;
-     labelimagen.src = imagen ;
+     labelimagen.src = 'imagen' ;
 
+
+     caja.classList.add('caja');
 	 labeltip.classList.add('presentacion');
 	 labeldescripcion.classList.add('presentacion');
 	 labelcodigo.classList.add('presentacion');
 	 labelprecio.classList.add('presentacion');
 	 labelimagen.classList.add('presentacion');
 
-	 contenedor.appendChild(labeltip);
-	 contenedor.appendChild(labeldescripcion);
-	 contenedor.appendChild(labelcodigo);
-	 contenedor.appendChild(labelprecio);
-	 contenedor.appendChild(labelimagen);
+	 contenedor.appendChild(caja);
+
+	 caja.appendChild(labeltip);
+	 caja.appendChild(labeldescripcion);
+	 caja.appendChild(labelcodigo);
+	 caja.appendChild(labelprecio);
+	 caja.appendChild(labelimagen);
 }
 
